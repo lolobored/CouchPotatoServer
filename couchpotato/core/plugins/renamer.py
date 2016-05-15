@@ -816,6 +816,8 @@ Remove it if you want it to be renamed (again, or at least let it try again)
 
     def moveFile(self, old, dest, use_default = False):
         dest = sp(dest)
+        # Modifying destination file to a lower case one
+        dest = dest.lower()
         try:
 
             if os.path.exists(dest) and os.path.isfile(dest):
